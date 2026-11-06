@@ -1,0 +1,6 @@
+{{ define "main" }}
+<section class="intro">
+  {{ .Content }}
+</section>
+{{ partial "post-list.html" (where site.RegularPages "Section" "posts") }}
+{{ end }}

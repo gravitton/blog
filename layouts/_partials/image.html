@@ -1,0 +1,6 @@
+<picture>
+  {{- with .dark }}
+  <source srcset="{{ .RelPermalink }}" media="(prefers-color-scheme: dark)" data-scheme="dark">
+  {{- end }}
+  <img src="{{ .url }}" alt="{{ .alt }}"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }} loading="lazy" decoding="async">
+</picture>

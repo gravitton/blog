@@ -1,0 +1,28 @@
+{{- $source := .Destination -}}
+{{- $image := or (.PageInner.Resources.Get $source) (resources.Get $source) -}}
+{{- $dark := false -}}
+{{- $url := $source -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+{{- with $image -}}
+  {{- $url = .RelPermalink -}}
+  {{- $extension := path.Ext $source -}}
+  {{- $darkSource := printf "%s-dark%s" (strings.TrimSuffix $extension $source) $extension -}}
+  {{- $dark = or ($.PageInner.Resources.Get $darkSource) (resources.Get $darkSource) -}}
+  {{- if and (eq .MediaType.MainType "image") (ne .MediaType.SubType "svg") -}}
+    {{- $density := cond (strings.Contains $source "@2x") 2 1 -}}
+    {{- $width = div .Width $density -}}
+    {{- $height = div .Height $density -}}
+  {{- end -}}
+{{- end -}}
+{{- $picture := partial "image.html" (dict "url" $url "dark" $dark "alt" .PlainText "width" $width "height" $height) -}}
+{{- if .IsBlock -}}
+<figure{{ with .Attributes.class }} class="{{ . }}"{{ end }}>
+  {{ $picture }}
+  {{- with .Title }}
+  <figcaption>{{ . | $.PageInner.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- else -}}
+{{ $picture }}
+{{- end -}}

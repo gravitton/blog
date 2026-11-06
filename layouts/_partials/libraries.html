@@ -1,0 +1,6 @@
+<h2>Libraries</h2>
+<ul class="libraries">
+  {{ range site.Params.libraries -}}
+  <li><a href="{{ site.Params.github }}/{{ .name }}">{{ .name }}</a> <span>{{ .summary }}</span></li>
+  {{ end -}}
+</ul>

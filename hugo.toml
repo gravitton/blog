@@ -1,0 +1,56 @@
+baseURL = "https://gravitton.github.io/blog/"
+locale = "en"
+title = "Gravitton"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+description = "Notes on building small Go libraries and a 2D game engine."
+author = "Tomáš Novotný"
+github = "https://github.com/gravitton"
+
+[[params.libraries]]
+name = "geometry"
+summary = "Generic, immutable 2D geometry: shapes, paths, collisions and raycasts"
+
+[[params.libraries]]
+name = "hexagon"
+summary = "Hexagonal grid math: coordinates, ranges, lines and field of view"
+
+[[params.libraries]]
+name = "grid"
+summary = "Generic 2D grids: rectangular, isometric and hexagonal, with sight and pathfinding"
+
+[[params.libraries]]
+name = "container"
+summary = "Generic containers: a 2D array indexed by points and an immutable sorted set"
+
+[[params.libraries]]
+name = "errors"
+summary = "Structured errors with fields, causes and stack traces, and a concurrent-safe multi error"
+
+[[params.libraries]]
+name = "assert"
+summary = "Lightweight test assertions"
+
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = false
+
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+
+[markup.goldmark.parser.attribute]
+block = true
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML"]
+
+[services.rss]
+limit = 20
+
+[sitemap]
+changeFreq = "weekly"
