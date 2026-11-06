@@ -22,11 +22,12 @@ The source of [the blog][link-website], built with [Hugo][link-hugo] and deploye
 ## Writing
 
 ```shell
-hugo server --buildDrafts
+hugo server
 ```
 
 A post is a Markdown file in `content/posts`, or a folder `content/posts/<post>/index.md` when it has images. It stays
-out of the published site while its front matter says `draft: true`.
+out of the published site while its front matter says `draft: true` or its date is still to come; `hugo server` shows
+it anyway, through `config/development/hugo.toml`, marked as a draft.
 
 ### Images
 
@@ -55,7 +56,7 @@ cd code/<post> && go run .
 Pushing to `main` builds and deploys. In the repository settings, Pages must use **GitHub Actions** as its source.
 
 
-[ico-workflow]:             https://img.shields.io/github/actions/workflow/status/gravitton/blog/pages.yml?branch=main&style=flat-square
+[ico-workflow]:             https://img.shields.io/github/actions/workflow/status/gravitton/blog/main.yml?branch=main&style=flat-square
 [ico-website]:              https://img.shields.io/website?url=https%3A%2F%2Fgravitton.github.io%2Fblog%2F&style=flat-square&up_color=e8883a
 
 [link-workflow]:            https://github.com/gravitton/blog/actions
