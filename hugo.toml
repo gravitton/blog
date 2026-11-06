@@ -54,3 +54,8 @@ limit = 20
 
 [sitemap]
 changeFreq = "weekly"
+
+[[module.mounts]]
+source = "content"
+target = "content"
+files = ["! posts/*/code/**"]

@@ -20,7 +20,6 @@
   --logo-mass: light-dark(#1c1713, #f4ece3);
 
   --page: 62.5rem;
-  --measure: 46rem;
 
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Georgia, serif;
@@ -63,19 +62,6 @@ body {
 
 main {
   flex: 1;
-}
-
-.intro,
-article > header,
-.prose > * {
-  max-width: var(--measure);
-}
-
-.prose > pre,
-.prose > .highlight,
-.prose > blockquote,
-.prose > figure {
-  max-width: none;
 }
 
 ::selection {

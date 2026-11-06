@@ -25,9 +25,10 @@ The source of [the blog][link-website], built with [Hugo][link-hugo] and deploye
 hugo server
 ```
 
-A post is a Markdown file in `content/posts`, or a folder `content/posts/<post>/index.md` when it has images. It stays
-out of the published site while its front matter says `draft: true` or its date is still to come; `hugo server` shows
-it anyway, through `config/development/hugo.toml`, marked as a draft.
+A post is a folder `content/posts/<number>-<slug>`, numbered in the order it was planned: the text in `index.md`, its
+images beside it, and its code in `code/`. The front matter gives the `slug`, which keeps the number out of the URL.
+A post stays out of the published site while its front matter says `draft: true` or its date is still to come;
+`hugo server` shows it anyway, through `config/development/hugo.toml`, marked as a draft.
 
 ### Images
 
@@ -44,11 +45,12 @@ The images of a post sit next to its `index.md`.
 
 ## Code behind the posts
 
-Every number and snippet in a post comes from a Go module in `code/<post>`, pinned to a published tag of the package
-it describes. CI runs each one before building the site, so a post cannot quote output the code no longer produces.
+Every number and snippet in a post comes from the Go module in its `code/` folder, pinned to a published tag of the
+package it describes. CI runs each one before building the site, so a post cannot quote output the code no longer
+produces, and Hugo leaves the folder out of the published site.
 
 ```shell
-cd code/<post> && go run .
+cd content/posts/<post>/code && go run .
 ```
 
 ## Publishing

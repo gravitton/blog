@@ -41,7 +41,7 @@ jobs:
       - name: Code behind the posts
         run: |
           shopt -s nullglob
-          for module in code/*/; do
+          for module in content/posts/*/code/; do
             echo "::group::$module"
             (
               cd "$module"
