@@ -22,6 +22,10 @@ name = "grid"
 summary = "Generic 2D grids: rectangular, isometric and hexagonal, with sight and pathfinding"
 
 [[params.libraries]]
+name = "spatial"
+summary = "Broad-phase spatial indexes: a spatial hash with box, point, segment and ray queries"
+
+[[params.libraries]]
 name = "container"
 summary = "Generic containers: a 2D array indexed by points and an immutable sorted set"
 

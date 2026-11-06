@@ -1,0 +1,7 @@
+{{- $slug := .Get 0 -}}
+{{- $text := .Get 1 -}}
+{{- $page := "" -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- if eq .Params.slug $slug -}}{{- $page = . -}}{{- end -}}
+{{- end -}}
+{{- with $page -}}<a href="{{ .RelPermalink }}">{{ $text }}</a>{{- else -}}{{ $text }}{{- end -}}

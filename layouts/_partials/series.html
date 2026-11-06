@@ -1,0 +1,12 @@
+{{- $previous := .PrevInSection -}}
+{{- $next := .NextInSection -}}
+{{- if or $previous $next }}
+<nav class="series" aria-label="Series">
+  {{- with $previous }}
+  <a class="previous" href="{{ .RelPermalink }}" rel="prev"><span>Previous</span>{{ .Title }}</a>
+  {{- end }}
+  {{- with $next }}
+  <a class="next" href="{{ .RelPermalink }}" rel="next"><span>Next</span>{{ .Title }}</a>
+  {{- end }}
+</nav>
+{{- end }}
