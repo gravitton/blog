@@ -45,6 +45,10 @@ jobs:
             echo "::group::$module"
             (
               cd "$module"
+              if ! go mod download && grep -q '^draft: true$' ../index.md; then
+                echo "::warning::$module requires a release that is not tagged yet; skipped while the post is a draft"
+                exit 0
+              fi
               test -z "$(gofmt -l .)" || { gofmt -l .; exit 1; }
               go vet ./...
               staticcheck ./...

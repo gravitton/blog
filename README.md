@@ -26,9 +26,23 @@ hugo server
 ```
 
 A post is a folder `content/posts/<number>-<slug>`, numbered in the order it was planned: the text in `index.md`, its
-images beside it, and its code in `code/`. The front matter gives the `slug`, which keeps the number out of the URL.
-A post stays out of the published site while its front matter says `draft: true` or its date is still to come;
-`hugo server` shows it anyway, through `config/development/hugo.toml`, marked as a draft.
+images beside it, and its code in `code/`. The front matter gives the `slug`, which keeps the number out of the URL,
+and `keywords`, which go into the page's metadata. A post stays out of the published site while its front matter
+says `draft: true` or its date is still to come; `hugo server` shows it anyway, through
+`config/development/hugo.toml`, marked as a draft.
+
+### Links between posts
+
+A post links back to an earlier one with a relative link, `[the previous post](../<slug>/)`. A mention of a later
+post goes through the `post` shortcode, which renders a link once that post is published and plain text until
+then, so no post ever links to a page that is not there yet:
+
+```markdown
+{{</* post "<slug>" "the next post" */>}}
+```
+
+Every post ends with a Previous and a Next link to its neighbours in the series, from the dates, among the posts
+published so far.
 
 ### Images
 
@@ -52,6 +66,19 @@ produces, and Hugo leaves the folder out of the published site.
 ```shell
 cd content/posts/<post>/code && go run .
 ```
+
+A draft may be written against a release that is not tagged yet. Its module requires the coming tag, and a
+git-ignored `go.work` beside it replaces that module with the sibling checkout for `go run .` meanwhile:
+
+```
+go 1.27
+
+use .
+
+replace github.com/gravitton/<package> => ../../../../../<package>
+```
+
+CI skips such a module with a warning while the post is a draft and fails on it once the post is published.
 
 ## Publishing
 
