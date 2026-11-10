@@ -8,6 +8,7 @@ disableKinds = ["taxonomy", "term"]
 description = "Notes on building small Go libraries and a 2D game engine."
 author = "Tomáš Novotný"
 github = "https://github.com/gravitton"
+googleSiteVerification = "TSm63CcX9g8Ok2QczfAMz_VoY_-gYryyCYiX56zNA3s"
 
 [[params.libraries]]
 name = "geometry"
