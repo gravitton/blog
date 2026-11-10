@@ -1,6 +1,6 @@
 ---
 title: "Go libraries for 2D games: geometry, hexagon and grid"
-date: 2026-11-06
+date: 2026-11-03
 slug: gravitton-libraries
 draft: false
 description: "Three open-source Go libraries for 2D games, geometry, hexagon and grid, take one task on one map: what a unit sees and how it reaches its goal, each at its own level."
