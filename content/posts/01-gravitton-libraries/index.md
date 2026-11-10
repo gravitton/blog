@@ -20,9 +20,9 @@ game engine on top of them, and three of them take that task, each at its own le
 
 Beside them are smaller ones: [`spatial`](https://github.com/gravitton/spatial) for the broad phase of collision,
 [`container`](https://github.com/gravitton/container) for the storage under a grid,
-[`errors`](https://github.com/gravitton/errors) and [`assert`](https://github.com/gravitton/assert). This post is the map of the series: what the three libraries do on one map,
-the rules they share, and the posts that each take one decision from them and show the code and the measurements
-behind it.
+[`errors`](https://github.com/gravitton/errors) and [`assert`](https://github.com/gravitton/assert). This post is
+the map of the series: what the three libraries do on one map, the rules they share, and the posts that each take
+one decision from them and show the code and the measurements behind it.
 
 ## The task
 
