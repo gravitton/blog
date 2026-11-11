@@ -108,7 +108,7 @@ since Go 1.21 `go build` uses it automatically, and raises the budget for the ca
 
 ```shell
 go run -pgo=off . -cpuprofile default.pgo   # record the profile
-go run .                                     # build with it
+go run .                                    # build with it
 ```
 
 With the profile, the compiler inlines the generic `Multiply` and `Cross` into the loop:
