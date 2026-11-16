@@ -26,7 +26,7 @@ one decision from them and show the code and the measurements behind it.
 
 ## The task
 
-The README of each of the three opens with the same map:
+The picture at the top of each of the three READMEs is drawn from the same map:
 
 ```go
 var rows = []string{
@@ -43,7 +43,7 @@ var rows = []string{
 ```
 
 `#` is a wall, `~` is rough ground, `S` is a scout and `G` its goal. What does the scout see, and how does it get to
-the goal? Each library answers in its own terms, and the picture at the top of its README draws the answer.
+the goal? Each library answers in its own terms, and its picture draws the answer.
 
 ## geometry
 

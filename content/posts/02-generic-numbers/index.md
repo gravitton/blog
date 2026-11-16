@@ -122,7 +122,7 @@ The generic version is now as fast as the hand-written one. The package document
 under Performance: methods that store two coordinates through `Cast` exceed the inlining budget, and a
 profile-guided build inlines them where the profile marks them hot.
 
-## The options
+## Why the code stays generic
 
 There are three ways to answer it.
 
@@ -137,7 +137,7 @@ There are three ways to answer it.
 The library takes the third. The cost is real, measured, and a flag away from zero, and the generic code stays one
 copy.
 
-## Closing
+## Free at run time, priced at compile time
 
 Generics over number types in Go are free at run time and not free at compile time: the inliner prices every
 branch of every instantiation before the dead ones are removed. Profile-guided optimization is the tool for exactly

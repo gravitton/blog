@@ -113,6 +113,33 @@ h3 {
   font-size: 1.15rem;
 }
 
+h2[id],
+h3[id] {
+  scroll-margin-top: 24px;
+}
+
+.anchor {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.anchor::before {
+  content: "#";
+  position: absolute;
+  right: 100%;
+  padding-right: 0.3em;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.anchor:hover::before,
+.anchor:focus-visible::before,
+:target > .anchor::before {
+  opacity: 1;
+}
+
 p {
   margin: 0 0 1.2em;
 }
@@ -391,11 +418,13 @@ pre code {
   background: var(--surface);
 }
 
-table {
-  display: block;
-  max-width: 100%;
+.table {
   margin: 0 0 1.4em;
   overflow-x: auto;
+}
+
+table {
+  width: 100%;
   border-collapse: collapse;
   font: 0.92rem/1.5 var(--sans);
   font-variant-numeric: tabular-nums;
@@ -414,11 +443,6 @@ th {
   color: var(--muted);
   font-size: 0.85rem;
   font-weight: 600;
-}
-
-th:not(:first-child),
-td:not(:first-child) {
-  white-space: nowrap;
 }
 
 th:last-child,
