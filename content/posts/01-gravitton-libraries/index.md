@@ -184,7 +184,7 @@ the reference:
 and [grid](https://pkg.go.dev/github.com/gravitton/grid).
 
 Every number above comes from
-[the code of this post](https://github.com/gravitton/blog/tree/main/content/posts/01-gravitton-libraries/code),
+[the code of this post](https://github.com/gravitton/gravitton.github.io/tree/main/content/posts/01-gravitton-libraries/code),
 pinned to `geometry v1.18.0`, `hexagon v1.8.0` and `grid v1.3.0`.
 
 {{< post "generic-numbers" "The next post" >}} takes the first of the shared rules and measures what generics over

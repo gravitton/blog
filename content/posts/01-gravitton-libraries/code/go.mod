@@ -1,4 +1,4 @@
-module github.com/gravitton/blog/content/posts/01-gravitton-libraries/code
+module github.com/gravitton/gravitton.github.io/content/posts/01-gravitton-libraries/code
 
 go 1.27
 

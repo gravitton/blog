@@ -58,11 +58,12 @@ jobs:
           done
 
       - name: Configure Pages
-        id: pages
         uses: actions/configure-pages@v6
 
       - name: Build
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: |
+          hugo --minify --destination public/blog
+          cp -R root/. public/
 
       - name: Upload site
         if: github.event_name != 'pull_request'

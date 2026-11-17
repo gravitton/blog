@@ -192,5 +192,5 @@ same way. The other half of "the answer does not depend on how you ask" is that 
 ask, which is {{< post "fused-multiply-add" "the next post: the same bits on amd64 and arm64" >}}.
 
 Every number above comes from
-[the code of this post](https://github.com/gravitton/blog/tree/main/content/posts/03-closed-boundaries/code), pinned to
+[the code of this post](https://github.com/gravitton/gravitton.github.io/tree/main/content/posts/03-closed-boundaries/code), pinned to
 `geometry v1.18.0`; the timings were not repeated on amd64.

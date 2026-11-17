@@ -1,7 +1,6 @@
 baseURL = "https://gravitton.github.io/blog/"
 locale = "en"
 title = "Gravitton"
-enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]

@@ -2,9 +2,9 @@
 
 <a href="https://github.com/gravitton">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gravitton/blog/refs/heads/main/docs/images/logo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gravitton/blog/refs/heads/main/docs/images/logo-light.svg">
-  <img alt="Gravitton blog" src="https://raw.githubusercontent.com/gravitton/blog/refs/heads/main/docs/images/logo-light.svg" width="300">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gravitton/gravitton.github.io/refs/heads/main/docs/images/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gravitton/gravitton.github.io/refs/heads/main/docs/images/logo-light.svg">
+  <img alt="Gravitton blog" src="https://raw.githubusercontent.com/gravitton/gravitton.github.io/refs/heads/main/docs/images/logo-light.svg" width="300">
 </picture>
 </a>
 
@@ -84,10 +84,14 @@ CI skips such a module with a warning while the post is a draft and fails on it 
 
 Pushing to `main` builds and deploys. In the repository settings, Pages must use **GitHub Actions** as its source.
 
+The repository is the organization's root site, `gravitton.github.io`, and the blog is its `/blog/`: Hugo builds
+into `public/blog`, and the files of `root/`, the `robots.txt` with the sitemap and a page that redirects to the
+blog, go to the root beside it.
 
-[ico-workflow]:             https://img.shields.io/github/actions/workflow/status/gravitton/blog/main.yml?branch=main&style=flat-square
+
+[ico-workflow]:             https://img.shields.io/github/actions/workflow/status/gravitton/gravitton.github.io/main.yml?branch=main&style=flat-square
 [ico-website]:              https://img.shields.io/website?url=https%3A%2F%2Fgravitton.github.io%2Fblog%2F&style=flat-square&up_color=e8883a
 
-[link-workflow]:            https://github.com/gravitton/blog/actions
+[link-workflow]:            https://github.com/gravitton/gravitton.github.io/actions
 [link-website]:             https://gravitton.github.io/blog/
 [link-hugo]:                https://gohugo.io

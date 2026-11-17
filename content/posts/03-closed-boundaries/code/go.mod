@@ -1,4 +1,4 @@
-module github.com/gravitton/blog/content/posts/03-closed-boundaries/code
+module github.com/gravitton/gravitton.github.io/content/posts/03-closed-boundaries/code
 
 go 1.27
 

@@ -1,4 +1,4 @@
-module github.com/gravitton/blog/content/posts/02-generic-numbers/code
+module github.com/gravitton/gravitton.github.io/content/posts/02-generic-numbers/code
 
 go 1.27
 

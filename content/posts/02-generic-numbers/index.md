@@ -147,7 +147,7 @@ The type parameter decides one more thing than the rounding in `Cast`: how close
 still count as inside, which is {{< post "closed-boundaries" "the next post" >}}.
 
 Every number above comes from
-[the code of this post](https://github.com/gravitton/blog/tree/main/content/posts/02-generic-numbers/code), pinned to
+[the code of this post](https://github.com/gravitton/gravitton.github.io/tree/main/content/posts/02-generic-numbers/code), pinned to
 `geometry v1.18.0`, measured on an Apple M3 with Go 1.27.3; its `default.pgo` is the profile it records. The amd64
 inlining costs are the compiler's own, from `GOARCH=amd64 go build -gcflags=-m=2`; the timings were not repeated on
 amd64.
