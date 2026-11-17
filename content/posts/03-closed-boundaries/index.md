@@ -49,6 +49,9 @@ type Rectangle[T Number] struct {
 turns them back into `center - size/2`, through the rotation. Each step rounds. The corner above comes back one ulp
 to the right and a little lower: `1.1e-13` and `2.1e-14`, nothing a player could ever see, and enough to fail `<=`.
 
+![Both corners of the rectangle magnified a hundred trillion times, a cell 1e-14 wide: the top-left corner it returns lies right of and below low, which an exact test puts outside; the bottom-right corner lies below high, which stays inside; Contains is true for both](corners.svg "The two corners of the rectangle above, magnified a hundred trillion times: a cell is `1e-14`. The tolerance, `1e-6`, reaches a hundred million cells past the picture.")
+{.plain}
+
 Why not store the corners and have no problem? Because a rectangle that turns has no "min" and "max" that stay
 corners, anchoring and scaling work around the center, and `Translate` should move one field, not two. For the
 axis-aligned case where the corners are what you have, the library has `Box`, which stores `Min` and `Max` and
